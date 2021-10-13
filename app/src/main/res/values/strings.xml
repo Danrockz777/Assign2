@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Welcome to INTI Fast Food </string>
+    <!--Recycler View Strings-->
+    <string-array name="SOP">
+        <item>Sanitize Your Hands </item>
+        <item>Fully Vaccinated</item>
+        <item>Wear Face Mask</item>
+        <item>Keep Distance</item>
+        <item>2 per Table</item>
+        <item>Scan with MySejahetera</item>
+    </string-array>
+    <string-array name="description">
+        <item>Make sure to sanitize you hands prior and after
+            eating at the restaurant.</item>
+        <item>An individual is considered to be fully vaccinated after 14 days from 2nd Dose.</item>
+        <item>Wear your mask prior and after eating at the restaurant.</item>
+        <item>Please keep a distance of 1.5 metres apart from each other.</item>
+        <item>Only two person per table is allowed and not more than that.</item>
+        <item>Scan to checkin and checkout mysejahtera status at this premise </item>
+    </string-array>
+</resources>
