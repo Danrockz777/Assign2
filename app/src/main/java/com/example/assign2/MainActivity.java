@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //First screen Greeting to get id
+        //First screen Greeting to get idd
         ConstraintLayout layout = findViewById(R.id.bg);
         TextView textview = findViewById(R.id.tv);
         //get time from calendar
