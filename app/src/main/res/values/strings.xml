@@ -18,4 +18,15 @@
         <item>Only two person per table is allowed and not more than that.</item>
         <item>Scan to checkin and checkout mysejahtera status at this premise </item>
     </string-array>
+    <!--Action Bar Message for Toast-->
+    <string name="action_order_message">You want to make a Reservation</string>
+    <string name="action_status_message">You to Review your Reservation.</string>
+    <!--Action Bar -->
+    <string name="action_order">Order</string>
+    <string name="action_status">Status</string>
+    <!--Dialog for alert pop-up -->
+    <string name="alert_title">Are you Fully Vaccinated ? </string>
+    <string name="alert_message">Only Fully Vaccinated Individuals who have completed 14 days since their second dose are allowed in this premise.</string>
+    <string name="ok_button">Yes</string>
+    <string name="cancel_button">No</string>
 </resources>
