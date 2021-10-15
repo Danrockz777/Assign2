@@ -107,7 +107,7 @@ public class sopscreen extends AppCompatActivity {
                 startActivity(intent);
                 Log.d("You chose this","Sucessfully Toasted !");
                 return true;*/
-
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
                 //Alert Dialog
                 AlertDialog alertDialog = new AlertDialog.Builder(this)
                         //set icon
@@ -122,6 +122,9 @@ public class sopscreen extends AppCompatActivity {
                             public void onClick(DialogInterface dialogInterface, int i) {
                                 //set what would happen when positive button is clicked
                                 displayToast("You may proceed to make a Reservation.");
+                                //open quiz if fully vaccinated
+                                Intent intent3 = new Intent(sopscreen.this, declareform.class);
+                                startActivity(intent3);
 
                             }
                         })
@@ -137,6 +140,7 @@ public class sopscreen extends AppCompatActivity {
                             }
                         })
                         .show();
+                /////////////////////////////////////////////////////////////////////////////////////////////
                 return true;
             case R.id.action_status:
                 displayToast(getString(R.string.action_status_message));
