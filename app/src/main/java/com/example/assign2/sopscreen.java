@@ -140,6 +140,12 @@ public class sopscreen extends AppCompatActivity {
                 return true;
             case R.id.action_status:
                 displayToast(getString(R.string.action_status_message));
+                return  true;
+            case R.id.action_enquire:
+                displayToast(getString(R.string.action_enquire_message));
+                Intent intent2 = new Intent(sopscreen.this, implicitintents.class);
+                startActivity(intent2);
+
             default:
                 // Do nothing
 

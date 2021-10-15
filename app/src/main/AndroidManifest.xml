@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Assign2">
         <activity
+            android:name=".implicitintents"
+            android:exported="true" />
+        <activity
             android:name=".sopscreen"
             android:exported="true" />
         <activity

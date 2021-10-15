@@ -21,12 +21,23 @@
     <!--Action Bar Message for Toast-->
     <string name="action_order_message">You want to make a Reservation</string>
     <string name="action_status_message">You to Review your Reservation.</string>
+    <string name="action_enquire_message">You want to know more about us.</string>
     <!--Action Bar -->
     <string name="action_order">Order</string>
     <string name="action_status">Status</string>
+    <string name="action_enquire">Navigate</string>
     <!--Dialog for alert pop-up -->
     <string name="alert_title">Are you Fully Vaccinated ? </string>
     <string name="alert_message">Only Fully Vaccinated Individuals who have completed 14 days since their second dose are allowed in this premise.</string>
     <string name="ok_button">Yes</string>
     <string name="cancel_button">No</string>
+    <!--Implicit Intents-->
+    <string name="edittext_uri">https://www.instagram.com/explore/locations/1027177849/inti-cafe?hl=en</string>
+    <string name="button_uri">Open Our Website</string>
+    <string name="edittext_loc">INTI International University</string>
+    <string name="button_loc">Open Location</string>
+    <string name="edittext_share">\Inti fast food restaurant is awesome !</string>
+    <string name="button_share">Share your review to your friends</string>
+    <string name="setchoosertitle">Share this text with :</string>
+    <!--Implicit Intents ends here-->
 </resources>

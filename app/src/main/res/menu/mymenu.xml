@@ -16,4 +16,11 @@
         android:title="@string/action_status"
         app:showAsAction="always" />
 
+    <item
+        android:id="@+id/action_enquire"
+        android:icon="@drawable/ic_navigate"
+        android:orderInCategory="20"
+        android:title="@string/action_enquire"
+        app:showAsAction="always" />
+
 </menu>
