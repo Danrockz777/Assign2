@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">My Quiz</string>
+    <string name="first_question">Are you feeling sick ? For example : fever, sore throat, flu and headaches.</string>
+    <string name="second_question">Besides the previous, are you having any cough or loss of smell and taste ?</string>
+    <string name="third_question">Have you associated in any event known with covid-19 cluster ?</string>
+    <string name="forth_question">Have you travelled to any country outside Malaysia within the last 14 days ?</string>
+    <string name="fifth_question">Have you been in close contact with any confirmed or suspected COVID-19 patient ?</string>
+    <string name="sixth_question">Are you a MOH covid-19 volunteer in the last 14 days ? </string>
+    <string name="yes_button">Yes</string>
+    <string name="no_button">No</string>
+    <string name="allow_toast">Eligible to enter premise.</string>
+    <string name="notallowed_toast">Not Eligible to enter premise !</string>
+    <string name="next_button">Next</string>
+    <string name="the_end">The End</string>
+
+    <!--Dialog for alert pop-up in Question Declaration Form-->
+    <string name="alert_title">Not Suitable !</string>
+    <string name="alert_message">You pose a threat to infect other customers at the premise therefore you are not credible to enter !</string>
+    <string name="ok_button">Noted. Got it !</string>
+    <string name="cancel_button">Cancel</string>
+</resources>
