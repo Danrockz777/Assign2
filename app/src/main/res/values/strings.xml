@@ -14,7 +14,7 @@
     <string name="the_end">The End</string>
 
     <!--Dialog for alert pop-up in Question Declaration Form-->
-    <string name="alert_title">Not Suitable !</string>
+    <string name="alert_title">Not Suitable for Dine In !</string>
     <string name="alert_message">You pose a threat to infect other customers at the premise therefore you are not credible to enter !</string>
     <string name="ok_button">Noted. Got it !</string>
     <string name="cancel_button">Cancel</string>
