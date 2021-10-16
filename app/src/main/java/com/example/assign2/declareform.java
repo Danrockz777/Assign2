@@ -5,6 +5,7 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -66,7 +67,9 @@ public class declareform extends AppCompatActivity {
                     mNextButton.setVisibility(View.GONE);
                     mTrueButton.setVisibility(View.GONE);
                     mFalseButton.setVisibility(View.GONE);
-                    mQuestionTextView.setText(R.string.the_end);
+                    //mQuestionTextView.setText(R.string.the_end);
+                    Intent intent4 = new Intent(declareform.this, viewReservation.class);
+                    startActivity(intent4);
                 }
                 else
                     updateQuestion();

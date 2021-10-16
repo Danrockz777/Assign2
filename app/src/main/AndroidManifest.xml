@@ -11,9 +11,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Assign2">
         <activity
+            android:name=".viewReservation"
+            android:exported="true" />
+        <activity
             android:name=".declareform"
-            android:exported="true"
-             />
+            android:exported="true" />
         <activity
             android:name=".implicitintents"
             android:exported="true" />
