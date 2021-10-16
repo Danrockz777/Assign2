@@ -23,6 +23,7 @@ public class viewReservation extends AppCompatActivity
     protected void onCreate (Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_reservation);
+        setTitle("Customer Reservation Details ");
         Intent intent = getIntent();
         /*
         String message = "Order: " +
