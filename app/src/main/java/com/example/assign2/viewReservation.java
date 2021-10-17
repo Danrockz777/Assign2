@@ -8,8 +8,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -17,12 +20,18 @@ import android.widget.Toast;
 public class viewReservation extends AppCompatActivity
         implements AdapterView.OnItemSelectedListener{
 
+    private boolean isCheckedValue;
+    private  String Name2;
 
 
     @Override
     protected void onCreate (Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_reservation);
+
+
+
+
         setTitle("Customer Reservation Details ");
         Intent intent = getIntent();
         /*
@@ -43,33 +52,55 @@ public class viewReservation extends AppCompatActivity
         if (spinner != null) {
             spinner.setAdapter(adapter);
         }
+
+
     }
 
     public void onRadioButtonClicked (View view){
         // Is the button now checked?
         boolean checked = ((RadioButton) view).isChecked();
+
         // Check which radio button was clicked.
         switch (view.getId()) {
             case R.id.sameday:
+
                 if (checked)
                     // Same day service
                     displayToast(getString(R.string.same_day_messenger_service));
+
                 break;
             case R.id.nextday:
                 if (checked)
+
                     // Next day delivery
                     displayToast(getString(R.string.next_day_ground_delivery));
+
+
                 break;
             case R.id.pickup:
                 if (checked)
                     // Pick up
                     displayToast(getString(R.string.pick_up));
+
                 break;
             default:
-                // Do nothing.
+
+
                 break;
+
         }
+
+        /*
+        if (checked==false){
+            displayToast("Make sure at least one Radio Button is checked !");
+            Intent intent6 = new Intent(viewReservation.this, viewReservation.class);
+            startActivity(intent6);
+        }*/
+
     }
+
+
+
     public void displayToast (String message){
         Toast.makeText(getApplicationContext(), message, Toast.LENGTH_SHORT).show();
 
@@ -124,5 +155,87 @@ public class viewReservation extends AppCompatActivity
     public void showTimePicker(View view) {
         DialogFragment newFragment = new TimePickerFragment();
         newFragment.show(getSupportFragmentManager(),getString(R.string.timepicker));
+    }
+
+
+    public void upload(View view) {
+
+        //Make sure checkbox is checked
+        //initiate a check box
+
+        CheckBox simpleCheckBox = (CheckBox) findViewById(R.id.checkBox);
+
+       /*RadioButton selectedRadioButton1 = (RadioButton)findViewById(R.id.sameday);
+        selectedRadioButton1.setChecked(true);*/
+        RadioButton radiobutton1 =(RadioButton)findViewById(R.id.sameday);
+        radiobutton1.setChecked(true);
+
+        //RadioButton selectedRadioButton2 = (RadioButton)findViewById(R.id.nextday);
+        //selectedRadioButton2.setChecked(true);
+
+        //RadioButton selectedRadioButton3 = (RadioButton)findViewById(R.id.pickup);
+        //selectedRadioButton3.setChecked(true);
+
+
+
+        /*
+                displayToast(getString(R.string.same_day_messenger_service));*/
+
+        //displayToast(getString(R.string.same_day_messenger_service));
+        //RadioGroup mySelection = (RadioGroup)findViewById(R.id.radioGroup);
+        //int radioButtonId = mySelection.getCheckedRadioButtonId();
+
+        //check current state of a check box (true or false)
+        if(simpleCheckBox.isChecked() && radiobutton1.isChecked()  ){
+            //start confirmation activity
+
+            Intent intent5 = new Intent(viewReservation.this, Confirmation.class);
+            startActivity(intent5);
+        }else{
+
+            displayToast("Make sure checkbox and Radio Button is checked !");
+            Intent intent6 = new Intent(viewReservation.this, viewReservation.class);
+            startActivity(intent6);
+
+
+        }
+
+
+        //explicit intent to confirmation activity
+        EditText textname, textaddress, textphone, textnote, textdate, texttime;
+        textname=findViewById(R.id.name_text);
+        textaddress=findViewById(R.id.address_text);
+        textphone=findViewById(R.id.phone_text);
+        textnote=findViewById(R.id.note_text);
+        textdate=findViewById(R.id.date_text);
+        texttime=findViewById(R.id.time_text);
+
+        String name = textname.getText().toString().trim();
+        String address = textaddress.getText().toString().trim();
+        String phone= textphone.getText().toString().trim();
+        String note = textnote.getText().toString().trim();
+        String date = textdate.getText().toString().trim();
+        String time = texttime.getText().toString().trim();
+
+        Bundle bundle = new Bundle();
+        bundle.putString("Name", name);
+        bundle.putString("Address", address);
+        bundle.putString("Phone", phone);
+        bundle.putString("Note", note);
+        bundle.putString("Date",date);
+        bundle.putString("Time", time);
+        Intent intent = new Intent(viewReservation.this, Confirmation.class);
+        intent.putExtras(bundle);
+        startActivity(intent);
+
+
+
+
+
+
+
+
+
+
     }
 }

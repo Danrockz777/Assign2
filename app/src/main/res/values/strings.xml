@@ -71,8 +71,8 @@
     <string name="enter_note_hint">Enter note</string>
     <string name="note_label_text">Note</string>
     <string name="choose_delivery_method">Choose a delivery method:</string>
-    <string name="same_day_messenger_service">Same day messenger service</string>
-    <string name="next_day_ground_delivery">Next day ground delivery</string>
+    <string name="same_day_messenger_service">Same day Dine in Reservation</string>
+    <string name="next_day_ground_delivery">Next day Dine in Reservation</string>
     <string name="pick_up">Pick up</string>
     <!--Spinner-->
     <string-array name="labels_array">
@@ -89,6 +89,10 @@
     <string name="date">Date :</string>
     <string name="timepicker">timePicker</string>
     <string name="order_textview">Please Fill in All the Details :</string>
+    <string name="checkbox_text">I hereby declare that all information are true.</string>
+    <string name="your_rerservation">Your Rerservation Details :</string>
+    <string name="reservation_details">reservation_details</string>
+    <string name="back_to_home">Back to Home</string>
     <!--<string name="time_toast">Time</string>-->
 
 </resources>

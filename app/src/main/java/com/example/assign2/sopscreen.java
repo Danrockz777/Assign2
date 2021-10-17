@@ -143,6 +143,9 @@ public class sopscreen extends AppCompatActivity {
                 /////////////////////////////////////////////////////////////////////////////////////////////
                 return true;
             case R.id.action_status:
+                Intent check = new Intent(sopscreen.this, Confirmation.class);
+                startActivity(check);
+                //navigateUpTo(getIntent());
                 displayToast(getString(R.string.action_status_message));
                 return  true;
             case R.id.action_enquire:

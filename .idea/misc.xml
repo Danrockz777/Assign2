@@ -5,12 +5,14 @@
       <map>
         <entry key="..\:/Users/Danrockz/AndroidStudioProjects/Assign2/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.19166666666666668" />
         <entry key="..\:/Users/Danrockz/AndroidStudioProjects/Assign2/app/src/main/res/drawable/ic_launcher_background.xml" value="0.19166666666666668" />
+        <entry key="..\:/Users/Danrockz/AndroidStudioProjects/Assign2/app/src/main/res/layout/activity_confirmation.xml" value="0.2015625" />
         <entry key="..\:/Users/Danrockz/AndroidStudioProjects/Assign2/app/src/main/res/layout/activity_declareform.xml" value="0.14791666666666667" />
         <entry key="..\:/Users/Danrockz/AndroidStudioProjects/Assign2/app/src/main/res/layout/activity_implicitintents.xml" value="0.4" />
         <entry key="..\:/Users/Danrockz/AndroidStudioProjects/Assign2/app/src/main/res/layout/activity_main.xml" value="0.264" />
         <entry key="..\:/Users/Danrockz/AndroidStudioProjects/Assign2/app/src/main/res/layout/activity_reservation.xml" value="0.21614583333333334" />
         <entry key="..\:/Users/Danrockz/AndroidStudioProjects/Assign2/app/src/main/res/layout/activity_sopscreen.xml" value="0.2064814814814815" />
         <entry key="..\:/Users/Danrockz/AndroidStudioProjects/Assign2/app/src/main/res/layout/activity_view_reservation.xml" value="0.21979166666666666" />
+        <entry key="..\:/Users/Danrockz/AndroidStudioProjects/Assign2/app/src/main/res/layout/fragment_check_box_check.xml" value="0.21979166666666666" />
         <entry key="..\:/Users/Danrockz/AndroidStudioProjects/Assign2/app/src/main/res/layout/fragment_date_picker.xml" value="0.21979166666666666" />
         <entry key="..\:/Users/Danrockz/AndroidStudioProjects/Assign2/app/src/main/res/layout/fragment_time_picker.xml" value="0.21979166666666666" />
         <entry key="..\:/Users/Danrockz/AndroidStudioProjects/Assign2/app/src/main/res/layout/my_row.xml" value="0.21927083333333333" />
