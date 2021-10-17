@@ -180,7 +180,7 @@
         android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@+id/calendar_button"
         app:layout_constraintTop_toBottomOf="@+id/date_label"
-        tools:ignore="SpeakableTextPresentCheck" />
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
     <ImageView
         android:id="@+id/calendar_button"
