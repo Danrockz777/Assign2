@@ -11,8 +11,37 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.Random;
+
 public class Confirmation extends AppCompatActivity {
 
+    //Generate Random String
+    static String getAlphaNumericString(int n)
+    {
+
+        // chose a Character random from this String
+        String AlphaNumericString = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                + "0123456789"
+                + "abcdefghijklmnopqrstuvxyz";
+
+        // create StringBuffer size of AlphaNumericString
+        StringBuilder sb = new StringBuilder(n);
+
+        for (int i = 0; i < n; i++) {
+
+            // generate a random number between
+            // 0 to AlphaNumericString variable length
+            int index
+                    = (int)(AlphaNumericString.length()
+                    * Math.random());
+
+            // add Character one by one in end of sb
+            sb.append(AlphaNumericString
+                    .charAt(index));
+        }
+
+        return sb.toString();
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,7 +67,12 @@ public class Confirmation extends AppCompatActivity {
             tvNote.setText("Your note is :"+" " + note);
             tvTime.setText("Your chosen time is :"+" " + time);
             tvDate.setText("Your chosen date is :"+" " + date);
+
         }
+        int n = 10;
+        TextView tvString =findViewById(R.id.tvString);
+        tvString.setText("Your Reservation ID is :"+" "+Confirmation.getAlphaNumericString(n));
+
 
     }
     public void displayToast (String message){
@@ -51,4 +85,7 @@ public class Confirmation extends AppCompatActivity {
        startActivity(home);
 
     }
+
+
+
 }

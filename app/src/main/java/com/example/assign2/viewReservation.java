@@ -189,8 +189,31 @@ public class viewReservation extends AppCompatActivity
         if(simpleCheckBox.isChecked() && radiobutton1.isChecked()  ){
             //start confirmation activity
 
-            Intent intent5 = new Intent(viewReservation.this, Confirmation.class);
-            startActivity(intent5);
+            EditText textname, textaddress, textphone, textnote, textdate, texttime;
+            textname=findViewById(R.id.name_text);
+            textaddress=findViewById(R.id.address_text);
+            textphone=findViewById(R.id.phone_text);
+            textnote=findViewById(R.id.note_text);
+            textdate=findViewById(R.id.date_text);
+            texttime=findViewById(R.id.time_text);
+
+            String name = textname.getText().toString().trim();
+            String address = textaddress.getText().toString().trim();
+            String phone= textphone.getText().toString().trim();
+            String note = textnote.getText().toString().trim();
+            String date = textdate.getText().toString().trim();
+            String time = texttime.getText().toString().trim();
+
+            Bundle bundle = new Bundle();
+            bundle.putString("Name", name);
+            bundle.putString("Address", address);
+            bundle.putString("Phone", phone);
+            bundle.putString("Note", note);
+            bundle.putString("Date",date);
+            bundle.putString("Time", time);
+            Intent intent = new Intent(viewReservation.this, Confirmation.class);
+            intent.putExtras(bundle);
+            startActivity(intent);
         }else{
 
             displayToast("Make sure checkbox and Radio Button is checked !");
@@ -200,7 +223,7 @@ public class viewReservation extends AppCompatActivity
 
         }
 
-
+        /*
         //explicit intent to confirmation activity
         EditText textname, textaddress, textphone, textnote, textdate, texttime;
         textname=findViewById(R.id.name_text);
@@ -226,7 +249,7 @@ public class viewReservation extends AppCompatActivity
         bundle.putString("Time", time);
         Intent intent = new Intent(viewReservation.this, Confirmation.class);
         intent.putExtras(bundle);
-        startActivity(intent);
+        startActivity(intent);*/
 
 
 
