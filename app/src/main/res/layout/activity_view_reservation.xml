@@ -140,7 +140,7 @@
             android:checked="true"
             android:onClick="onRadioButtonClicked"
             android:text="@string/same_day_messenger_service"
-            tools:ignore="OnClick" />
+            tools:ignore="OnClick,TouchTargetSizeCheck" />
 
         <RadioButton
             android:id="@+id/nextday"

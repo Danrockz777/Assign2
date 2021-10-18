@@ -70,9 +70,9 @@
     <string name="enter_phone_hint">Enter phone</string>
     <string name="enter_note_hint">Enter note</string>
     <string name="note_label_text">Note</string>
-    <string name="choose_delivery_method">Choose a delivery method:</string>
-    <string name="same_day_messenger_service">Same day Dine in Reservation</string>
-    <string name="next_day_ground_delivery">Next day Dine in Reservation</string>
+    <string name="choose_delivery_method">Choose a Reservation Method:</string>
+    <string name="same_day_messenger_service">Dine in Reservation</string>
+    <string name="next_day_ground_delivery">Food Delivery</string>
     <string name="pick_up">Pick up</string>
     <!--Spinner-->
     <string-array name="labels_array">

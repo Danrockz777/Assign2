@@ -59,6 +59,13 @@
         android:textStyle="bold" />
 
     <TextView
+        android:id="@+id/tvDelivery"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
         android:id="@+id/tvString"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

@@ -55,11 +55,15 @@ public class viewReservation extends AppCompatActivity
 
 
     }
-
+    RadioGroup radioGroup;
+    RadioButton radioButton;
+    //radioGroup=(RadioGroup)findViewById(R.id.radioGroup);
     public void onRadioButtonClicked (View view){
         // Is the button now checked?
         boolean checked = ((RadioButton) view).isChecked();
-
+        RadioButton radiobutton1 =(RadioButton)findViewById(R.id.sameday);
+        RadioButton radiobutton2 =(RadioButton)findViewById(R.id.nextday);
+        RadioButton radiobutton3 =(RadioButton)findViewById(R.id.pickup);
         // Check which radio button was clicked.
         switch (view.getId()) {
             case R.id.sameday:
@@ -74,6 +78,7 @@ public class viewReservation extends AppCompatActivity
 
                     // Next day delivery
                     displayToast(getString(R.string.next_day_ground_delivery));
+                    radiobutton2.setChecked(true);
 
 
                 break;
@@ -81,10 +86,13 @@ public class viewReservation extends AppCompatActivity
                 if (checked)
                     // Pick up
                     displayToast(getString(R.string.pick_up));
+                radiobutton3.setChecked(true);
+
 
                 break;
             default:
-
+                /*if(radiobutton1.isChecked()== false && radiobutton2.isChecked()== true || radiobutton3.isChecked()==false ){
+                    radiobutton1.setChecked(false);}*/
 
                 break;
 
@@ -165,10 +173,24 @@ public class viewReservation extends AppCompatActivity
 
         CheckBox simpleCheckBox = (CheckBox) findViewById(R.id.checkBox);
 
-       /*RadioButton selectedRadioButton1 = (RadioButton)findViewById(R.id.sameday);
+        /*RadioButton selectedRadioButton1 = (RadioButton)findViewById(R.id.sameday);
         selectedRadioButton1.setChecked(true);*/
         RadioButton radiobutton1 =(RadioButton)findViewById(R.id.sameday);
-        radiobutton1.setChecked(true);
+        RadioButton radiobutton2 =(RadioButton)findViewById(R.id.nextday);
+        RadioButton radiobutton3 =(RadioButton)findViewById(R.id.pickup);
+        /*if(radiobutton2.isChecked()==true){
+            displayToast("test2");
+        }*/
+        //radiobutton1.setChecked(true);
+        //////////////////////////////////////////////////////////////////////////////////////////////////
+        /////////////////////////////////////////////////////////////////////////////////////////////////
+        //Errror starts here
+      //int selectedid=radioGroup.getCheckedRadioButtonId();
+
+        /*if(radiobutton1.isChecked()== false && radiobutton2.isChecked()== false && radiobutton3.isChecked()==false ){
+        radiobutton1.setChecked(true);}*/
+        ////////////////////////////////////////////////////////////////////////////////////////////////
+        ///////////////////////////////////////////////////////////////////////////////////////////////
 
         //RadioButton selectedRadioButton2 = (RadioButton)findViewById(R.id.nextday);
         //selectedRadioButton2.setChecked(true);
@@ -185,12 +207,15 @@ public class viewReservation extends AppCompatActivity
         //RadioGroup mySelection = (RadioGroup)findViewById(R.id.radioGroup);
         //int radioButtonId = mySelection.getCheckedRadioButtonId();
         EditText textname, textaddress, textphone, textnote, textdate, texttime;
+        RadioGroup radioGroup;
+        RadioButton radioButton;
         textname=findViewById(R.id.name_text);
         textaddress=findViewById(R.id.address_text);
         textphone=findViewById(R.id.phone_text);
         textnote=findViewById(R.id.note_text);
         textdate=findViewById(R.id.date_text);
         texttime=findViewById(R.id.time_text);
+        radioGroup=(RadioGroup)findViewById(R.id.radioGroup);
         String name = textname.getText().toString().trim();
         String address = textaddress.getText().toString().trim();
         String phone= textphone.getText().toString().trim();
@@ -198,11 +223,24 @@ public class viewReservation extends AppCompatActivity
         String date = textdate.getText().toString().trim();
         String time = texttime.getText().toString().trim();
 
+
+        ////////////////////////////////////////
+        //Check radio button for explicit intent
+        int selectedid2=radioGroup.getCheckedRadioButtonId();
+        radioButton=(RadioButton) findViewById(selectedid2);
+        String delivery= radioButton.getText().toString().trim();
+        ////////////////////////////////////////
+
         //check current state of a check box (true or false)
-        if(simpleCheckBox.isChecked() && radiobutton1.isChecked()  ){
+
             //start confirmation activity
+       /* if(simpleCheckBox.isChecked()==false){
 
+            displayToast("Make sure checkbox and Radio Button is checked !");
 
+        }*/
+
+            if (simpleCheckBox.isChecked() == true && selectedid2 != -1) {
             /*
             //Basic edittext validation to make sure all fields are filled
             String checkname=textname.getText().toString();
@@ -212,41 +250,45 @@ public class viewReservation extends AppCompatActivity
             String checkdate=textdate.getText().toString();
             String checktime=texttime.getText().toString();*/
 
-            ///////////////////////////////////////////////////////////////////////////////
-            ///////////////////////////////////////////////////////////////////////////////
+                ///////////////////////////////////////////////////////////////////////////////
+                ///////////////////////////////////////////////////////////////////////////////
 
 
+                Bundle bundle = new Bundle();
+                bundle.putString("Name", name);
+                bundle.putString("Address", address);
+                bundle.putString("Phone", phone);
+                bundle.putString("Note", note);
+                bundle.putString("Date", date);
+                bundle.putString("Time", time);
+                bundle.putString("Delivery", delivery);
+                Intent intent = new Intent(viewReservation.this, Confirmation.class);
+                intent.putExtras(bundle);
+                startActivity(intent);
+            } //else {
+                if (simpleCheckBox.isChecked()==false || name.equals("") || address.equals("") || phone.equals("") || note.equals("") || date.equals("") || time.equals("")) {
 
 
-            Bundle bundle = new Bundle();
-            bundle.putString("Name", name);
-            bundle.putString("Address", address);
-            bundle.putString("Phone", phone);
-            bundle.putString("Note", note);
-            bundle.putString("Date",date);
-            bundle.putString("Time", time);
-            Intent intent = new Intent(viewReservation.this, Confirmation.class);
-            intent.putExtras(bundle);
-            startActivity(intent);
-        }else{
+                    textname.setError("Username is required !");
+                    textaddress.setError("Addressis required !");
+                    textphone.setError("Phone is required !");
+                    textnote.setError("Note is required !");
+                    textdate.setError("Date is required !");
+                    texttime.setError("Time is required !");
+                    simpleCheckBox.setError("Make sure checkbox  is checked !");
 
-            if(name.equals("")|| address.equals("")||phone.equals("")||note.equals("")||date.equals("")||time.equals("")) {
-                textname.setError("Username is required !");
-                textaddress.setError("Addressis required !");
-                textphone.setError("Phone is required !");
-                textnote.setError("Note is required !");
-                textdate.setError("Date is required !");
-                texttime.setError("Time is required !");
+                }
+                //displayToast("Make sure checkbox and Radio Button is checked !");
 
 
-            }
+            //}
 
-            displayToast("Make sure checkbox and Radio Button is checked !");
+
             /*Intent intent6 = new Intent(viewReservation.this, viewReservation.class);
             startActivity(intent6);*/
 
 
-        }
+
 
         /*
         //explicit intent to confirmation activity
@@ -280,10 +322,9 @@ public class viewReservation extends AppCompatActivity
 
 
 
-
+        }
 
 
 
 
     }
-}

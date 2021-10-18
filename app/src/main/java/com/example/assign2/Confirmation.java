@@ -60,18 +60,21 @@ public class Confirmation extends AppCompatActivity {
             String note = bundle.getString("Note");
             String time = bundle.getString("Time");
             String date = bundle.getString("Date");
+            String delivery=bundle.getString("Delivery");
             TextView tvName = findViewById(R.id.tvName);
             TextView tvAddress = findViewById(R.id.tvAddress);
             TextView tvPhone= findViewById(R.id.tvPhone);
             TextView tvNote = findViewById(R.id.tvNote);
             TextView tvTime = findViewById(R.id.tvTime);
             TextView tvDate = findViewById(R.id.tvDate);
+            TextView tvDelivery=findViewById(R.id.tvDelivery);
             tvName.setText("Name is :"+" " + name);
             tvAddress.setText("Address is :"+" " + address);
             tvPhone.setText("Phone number is :"+" " + phone);
             tvNote.setText("Note is :"+" " + note);
             tvTime.setText("Chosen time is :"+" " + time);
             tvDate.setText("Chosen date is :"+" " + date);
+            tvDelivery.setText("Delivery method :"+" "+delivery);
 
         }
         int n = 10;

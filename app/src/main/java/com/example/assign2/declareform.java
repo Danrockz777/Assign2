@@ -86,7 +86,7 @@ public class declareform extends AppCompatActivity {
     public void checkAnswer(String userAnswer) {
         String answer = mQuestionBank[mCurrentIndex].isAnswer();
         if (userAnswer == answer) {
-            Toast.makeText(this, R.string.allow_toast, Toast.LENGTH_SHORT).show();
+            /*Toast.makeText(this, R.string.allow_toast, Toast.LENGTH_SHORT).show();*/
             mNextButton.setEnabled(true);
         }
         else {
