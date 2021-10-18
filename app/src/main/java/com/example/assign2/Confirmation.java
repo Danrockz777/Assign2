@@ -1,6 +1,8 @@
 package com.example.assign2;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.NotificationCompat;
+import androidx.core.app.NotificationManagerCompat;
 import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 
 import android.content.Intent;
@@ -15,6 +17,9 @@ import java.util.Random;
 
 public class Confirmation extends AppCompatActivity {
 
+    //Notification variables
+    private final String CHANNEL_ID= "testing notofication";
+    private final int NOTIFICATION_ID= 001;
     //Generate Random String
     static String getAlphaNumericString(int n)
     {
@@ -61,19 +66,28 @@ public class Confirmation extends AppCompatActivity {
             TextView tvNote = findViewById(R.id.tvNote);
             TextView tvTime = findViewById(R.id.tvTime);
             TextView tvDate = findViewById(R.id.tvDate);
-            tvName.setText("Your name is :"+" " + name);
-            tvAddress.setText("Your address is :"+" " + address);
-            tvPhone.setText("Your phone number is :"+" " + phone);
-            tvNote.setText("Your note is :"+" " + note);
-            tvTime.setText("Your chosen time is :"+" " + time);
-            tvDate.setText("Your chosen date is :"+" " + date);
+            tvName.setText("Name is :"+" " + name);
+            tvAddress.setText("Address is :"+" " + address);
+            tvPhone.setText("Phone number is :"+" " + phone);
+            tvNote.setText("Note is :"+" " + note);
+            tvTime.setText("Chosen time is :"+" " + time);
+            tvDate.setText("Chosen date is :"+" " + date);
 
         }
         int n = 10;
         TextView tvString =findViewById(R.id.tvString);
         tvString.setText("Your Reservation ID is :"+" "+Confirmation.getAlphaNumericString(n));
 
-
+        //Notification
+        NotificationCompat.Builder builder = new NotificationCompat.Builder(Confirmation.this,CHANNEL_ID)
+                .setSmallIcon(R.drawable.ic_notification)
+                .setContentTitle("Reservation Status")
+                .setContentText("Congrats ! Your Reservation has been confirmed !")
+                .setStyle(new NotificationCompat.BigTextStyle()
+                        .bigText("Congrats ! Your Reservation has been confirmed !"))
+                .setPriority(NotificationCompat.PRIORITY_DEFAULT);
+        NotificationManagerCompat notificationManagerCompat = NotificationManagerCompat.from(this);
+        notificationManagerCompat.notify(NOTIFICATION_ID,builder.build());
     }
     public void displayToast (String message){
         Toast.makeText(getApplicationContext(), message, Toast.LENGTH_SHORT).show();
