@@ -254,18 +254,19 @@ public class viewReservation extends AppCompatActivity
                 ///////////////////////////////////////////////////////////////////////////////
 
 
-                Bundle bundle = new Bundle();
-                bundle.putString("Name", name);
-                bundle.putString("Address", address);
-                bundle.putString("Phone", phone);
-                bundle.putString("Note", note);
-                bundle.putString("Date", date);
-                bundle.putString("Time", time);
-                bundle.putString("Delivery", delivery);
-                Intent intent = new Intent(viewReservation.this, Confirmation.class);
-                intent.putExtras(bundle);
-                startActivity(intent);
-            } //else {
+                //Bundle bundle = new Bundle();
+
+                /*textname.setError("Username is required !");
+                textaddress.setError("Addressis required !");
+                textphone.setError("Phone is required !");
+                textnote.setError("Note is required !");
+                textdate.setError("Date is required !");
+                texttime.setError("Time is required !");
+                simpleCheckBox.setError("Make sure checkbox  is checked !");*/
+                Intent intent6 = new Intent(viewReservation.this, viewReservation.class);
+                startActivity(intent6);}
+                //displayToast("Fill Up All Details First !!");}
+             //else {
                 if (simpleCheckBox.isChecked()==false || name.equals("") || address.equals("") || phone.equals("") || note.equals("") || date.equals("") || time.equals("")) {
 
 
@@ -276,7 +277,21 @@ public class viewReservation extends AppCompatActivity
                     textdate.setError("Date is required !");
                     texttime.setError("Time is required !");
                     simpleCheckBox.setError("Make sure checkbox  is checked !");
+                    displayToast("CheckBox wasn't Checked !");
 
+                }
+                else{
+                    Bundle bundle = new Bundle();
+                    bundle.putString("Name", name);
+                    bundle.putString("Address", address);
+                    bundle.putString("Phone", phone);
+                    bundle.putString("Note", note);
+                    bundle.putString("Date", date);
+                    bundle.putString("Time", time);
+                    bundle.putString("Delivery", delivery);
+                    Intent intent = new Intent(viewReservation.this, Confirmation.class);
+                    intent.putExtras(bundle);
+                    startActivity(intent);
                 }
                 //displayToast("Make sure checkbox and Radio Button is checked !");
 
