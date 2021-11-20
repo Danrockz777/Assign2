@@ -58,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
                 //close first activity
                 finish();
             }
-        }, 1000);// 5 seconds timer
+        }, 3000);// 3 seconds timer
 
     }
 

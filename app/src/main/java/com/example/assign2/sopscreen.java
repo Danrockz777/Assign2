@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
@@ -41,6 +42,8 @@ public class sopscreen extends AppCompatActivity {
         MyAdapter myAdapter=new MyAdapter(this,sName,sDescription,images);
         recyclerView.setAdapter(myAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        MediaPlayer mediaPlayer = MediaPlayer.create(this, R.raw.sopaudio);
+        mediaPlayer.start();
 
 
     }
