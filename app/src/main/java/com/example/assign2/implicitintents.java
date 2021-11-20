@@ -9,6 +9,8 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.MediaController;
+import android.widget.VideoView;
 
 public class implicitintents extends AppCompatActivity {
 
@@ -20,6 +22,16 @@ public class implicitintents extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_implicitintents);
+        //Added video
+        VideoView videoView = (VideoView) findViewById(R.id.videoView);
+        MediaController mediaController= new MediaController(this);
+        mediaController.setAnchorView(videoView);
+        String uriPath2 = "android.resource://"+getPackageName()+"/"+R.raw.cafevidfinal;
+        Uri uri2 = Uri.parse(uriPath2);
+        videoView.setMediaController(mediaController);
+        videoView.setVideoURI(uri2);
+        videoView.requestFocus();
+        videoView.start();
     }
 
     //Open our website

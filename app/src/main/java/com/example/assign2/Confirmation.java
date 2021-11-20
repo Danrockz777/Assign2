@@ -98,7 +98,7 @@ public class Confirmation extends AppCompatActivity {
     }
 
     public void goHome(View view) {
-        Intent home= new Intent(Confirmation.this, sopscreen.class);
+        Intent home= new Intent(Confirmation.this, progressbar.class);
        startActivity(home);
 
     }
