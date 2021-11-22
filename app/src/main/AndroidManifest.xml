@@ -11,6 +11,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Assign2">
         <activity
+            android:name=".ViewBookings"
+            android:exported="true" />
+        <activity
             android:name=".progressbar"
             android:exported="true" />
         <activity

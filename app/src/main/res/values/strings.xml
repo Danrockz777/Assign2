@@ -102,6 +102,8 @@
 
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="confirm_button">Confirm</string>
+    <string name="review_button">Review</string>
     <!--<string name="time_toast">Time</string>-->
 
 </resources>

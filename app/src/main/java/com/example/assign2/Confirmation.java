@@ -8,6 +8,7 @@ import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -20,6 +21,10 @@ public class Confirmation extends AppCompatActivity {
     //Notification variables
     private final String CHANNEL_ID= "testing notofication";
     private final int NOTIFICATION_ID= 001;
+    private Button addBookingsBtn, readBookingsBtn;
+    private DBHandler dbHandler;
+    private TextView tvName, tvAddress, tvNote, tvPhone, tvDate, tvTime, tvDelivery, tvString;
+
     //Generate Random String
     static String getAlphaNumericString(int n)
     {
@@ -75,22 +80,78 @@ public class Confirmation extends AppCompatActivity {
             tvTime.setText("Chosen time is :"+" " + time);
             tvDate.setText("Chosen date is :"+" " + date);
             tvDelivery.setText("Delivery method :"+" "+delivery);
+            int n = 10;
+            TextView tvString =findViewById(R.id.tvString);
+            tvString.setText("Your Reservation ID is :"+" "+Confirmation.getAlphaNumericString(n));
 
+            //////////////////////////////////////////////////////////////////////////////////////////////////////
+            /////////////////Add to DATABASE//////////////////////////////////////////////////////////////////////
+
+            addBookingsBtn = findViewById(R.id.idBtnAddBookings);
+            readBookingsBtn = findViewById(R.id.idBtnReadBookings);
+            // creating a new dbhandler class
+            // and passing our context to it.
+            dbHandler = new DBHandler(Confirmation.this);
+
+            // below line is to add on click listener for our add course button.
+            addBookingsBtn.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+
+                    // below line is to get data from all  fields.
+                    String Name = tvName.getText().toString();
+                    String Address = tvAddress.getText().toString();
+                    String Phone = tvPhone.getText().toString();
+                    String Note = tvNote.getText().toString();
+                    String Date = tvDate.getText().toString();
+                    String Time = tvTime.getText().toString();
+                    String Delivery = tvDelivery.getText().toString();
+                    String String2=  tvString.getText().toString();
+
+                    // on below line we are calling a method to add new
+                    // course to sqlite data and pass all our values to it.
+                    dbHandler.addNewBookings(Name, Address, Phone, Note
+                            ,Date, Time, Delivery, String2);
+
+                    // after adding the data we are displaying a toast message.
+                    Toast.makeText(Confirmation.this, "Bookings has been added.", Toast.LENGTH_SHORT).show();
+                    tvName.setText("");
+                    tvAddress.setText("");
+                    tvPhone.setText("");
+                    tvNote.setText("");
+                    tvDate.setText("");
+                    tvTime.setText("");
+                    tvDelivery.setText("");
+                    tvString.setText("");
+                }
+            });
+
+            readBookingsBtn.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    // opening a new activity via a intent.
+                    Intent i = new Intent(Confirmation.this, ViewBookings.class);
+                    startActivity(i);
+                }
+            });
+
+            /////////////////////////////////////////////////////////////////////////////////////////////////////////
+            ////////////////////////////////////////////////////////////////////////////////////////////////////////
         }
-        int n = 10;
-        TextView tvString =findViewById(R.id.tvString);
-        tvString.setText("Your Reservation ID is :"+" "+Confirmation.getAlphaNumericString(n));
+
 
         //Notification
         NotificationCompat.Builder builder = new NotificationCompat.Builder(Confirmation.this,CHANNEL_ID)
                 .setSmallIcon(R.drawable.ic_notification)
                 .setContentTitle("Reservation Status")
-                .setContentText("Congrats ! Your Reservation has been confirmed !")
+                .setContentText("Congrats ! Your Almost There !")
                 .setStyle(new NotificationCompat.BigTextStyle()
-                        .bigText("Congrats ! Your Reservation has been confirmed !"))
+                        .bigText("Please Confirm to make your Reservation !"))
                 .setPriority(NotificationCompat.PRIORITY_DEFAULT);
         NotificationManagerCompat notificationManagerCompat = NotificationManagerCompat.from(this);
         notificationManagerCompat.notify(NOTIFICATION_ID,builder.build());
+
+
     }
     public void displayToast (String message){
         Toast.makeText(getApplicationContext(), message, Toast.LENGTH_SHORT).show();
@@ -102,6 +163,8 @@ public class Confirmation extends AppCompatActivity {
        startActivity(home);
 
     }
+
+
 
 
 
