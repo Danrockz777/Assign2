@@ -21,6 +21,6 @@ public class progressbar extends AppCompatActivity {
             }
         };
         Timer opening=new Timer();
-        opening.schedule(task,5000);
+        opening.schedule(task,3000);
     }
 }

@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void run() {
                 //explicit intent to change screen
-                Intent intent1 = new Intent(MainActivity.this, sopscreen.class);
+                Intent intent1 = new Intent(MainActivity.this, LoginPage.class);
                 startActivity(intent1);
                 //close first activity
                 finish();

@@ -108,6 +108,13 @@ public class Confirmation extends AppCompatActivity {
                     String Delivery = tvDelivery.getText().toString();
                     String String2=  tvString.getText().toString();
 
+                    // validating if the text fields are empty or not.
+                    if (tvName.getText().toString().equals("") && tvAddress.getText().toString().equals("") && tvPhone.getText().toString().equals("")
+                            && tvNote.getText().toString().equals("") && tvDate.getText().toString().equals("")&& tvTime.getText().toString().equals("") &&
+                            tvDelivery.getText().toString().equals("")) {
+                        Toast.makeText(Confirmation.this, "Reservation Booking has been made !..", Toast.LENGTH_SHORT).show();
+                        return;
+                    }
                     // on below line we are calling a method to add new
                     // course to sqlite data and pass all our values to it.
                     dbHandler.addNewBookings(Name, Address, Phone, Note
@@ -125,6 +132,8 @@ public class Confirmation extends AppCompatActivity {
                     tvString.setText("");
                 }
             });
+
+
 
             readBookingsBtn.setOnClickListener(new View.OnClickListener() {
                 @Override

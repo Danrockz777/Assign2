@@ -106,4 +106,17 @@
     <string name="review_button">Review</string>
     <!--<string name="time_toast">Time</string>-->
 
+
+
+    <string name="btnlogin_text">LOGIN</string>
+    <string name="btnsignup_text">SIGN UP</string>
+    <string name="enter_your_user_id_text">Enter Your User ID</string>
+    <string name="don_t_have_an_account_text">Don\'t have an account ?</string>
+    <string name="enter_your_password_text">Enter Your Password</string>
+    <string name="choose_an_id_text">Choose an ID</string>
+    <string name="enter_password_text">Enter Password</string>
+    <string name="enter_password_again_text">Enter Password Again</string>
+    <string name="sign_up2_text">Sign Up</string>
+    <string name="gologin_text">LOGIN</string>
+    <string name="home_page_text">Hello</string>
 </resources>
