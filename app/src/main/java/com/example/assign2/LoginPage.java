@@ -30,15 +30,25 @@ public class LoginPage extends AppCompatActivity {
             public void onClick(View v) {
                 String user=username.getText().toString();
                 String pw=password.getText().toString();
+                if(username.getText().toString().equals("admin123") && password.getText().toString().equals("admin123")){
+                    Intent intent=new Intent(getApplicationContext(),EmployeeMain.class);
+                    startActivity(intent);
+                }
+
                 boolean loginSuccessful = dbHelper.checkLogin(user,pw);
                 if(loginSuccessful){
                     displayToast("Login Sucessful");
+
                     Intent intent=new Intent(getApplicationContext(),sopscreen.class);
                     startActivity(intent);
                 }else{
-                    displayToast("Invalid username or password");
+                    if(username.getText().toString().equals("admin123") && password.getText().toString().equals("admin123")){
+                    displayToast("Admin Login");
+                    }
+                    else {
+                    displayToast("Invalid Credentials");
                     username.setText("");
-                    password.setText("");
+                    password.setText("");}
                 }
             }
         });

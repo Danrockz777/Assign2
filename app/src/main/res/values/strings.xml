@@ -107,7 +107,6 @@
     <!--<string name="time_toast">Time</string>-->
 
 
-
     <string name="btnlogin_text">LOGIN</string>
     <string name="btnsignup_text">SIGN UP</string>
     <string name="enter_your_user_id_text">Enter Your User ID</string>
@@ -119,4 +118,50 @@
     <string name="sign_up2_text">Sign Up</string>
     <string name="gologin_text">LOGIN</string>
     <string name="home_page_text">Hello</string>
+    <string name="RandomString">Booking ID</string>
+
+    <!--ADMIN Part -->
+    <string name="button_add">Add</string>
+    <string name="button_view">View</string>
+    <string name="tv_department">Select Delivery Method</string>
+    <string name="tv_title">Add A New Reservation</string>
+    <string name="et_name">Name</string>
+
+    <string name="tv_title2">Edit Reservation</string>
+    <string name="tvName">Name</string>
+    <string name="tvSalary">Payment</string>
+    <string name="tvDepartment">Select Delivery Method</string>
+    <string name="tvJoinDate">JoinDate</string>
+    <string name="tvAddress">Address</string>
+    <string name="tvPhone">Phone</string>
+    <string name="tvTime">Time</string>
+
+    <string name="delete_button_text">Delete</string>
+    <string name="tv_salary">Customer Payment</string>
+    <string name="tv_joindate">JoinDate</string>
+    <string name="btn_edit">Edit</string>
+
+    <array name="departments">
+        <item>Dine in Reservation</item>
+        <item>Pick Up</item>
+        <item>Food Delivery</item>
+
+    </array>
+    <string name="add_a_new_employee">Add New Reservation</string>
+
+    <string name="add_employee">Add Reservation</string>
+    <string name="view_employee">View Reservation</string>
+    <string name="select_department">Select Delivery Method</string>
+    <string name="edit_employee">Edit</string>
+    <string name="delete_employee">Delete</string>
+    <string name="update_employee">Update</string>
+    <string name="enter_employee_name">Enter Name</string>
+
+    <string name="enter_employee_phone">Enter Phone</string>
+    <string name="enter_employee_address">Enter Address</string>
+    <string name="enter_employee_time">Enter Time</string>
+
+    <string name="enter_salary">Enter Customer Payment</string>
+
+
 </resources>

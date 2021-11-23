@@ -11,6 +11,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Assign2">
         <activity
+            android:name=".EmployeeMain"
+            android:exported="true" />
+        <activity
+            android:name=".EmployeeActivity"
+            android:exported="true" />
+        <activity
             android:name=".SignUp"
             android:exported="true" />
         <activity

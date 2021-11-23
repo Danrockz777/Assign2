@@ -8,6 +8,8 @@
         <entry key="..\:/Users/Danrockz/AndroidStudioProjects/Assign2/app/src/main/res/drawable/ic_launcher_background.xml" value="0.19166666666666668" />
         <entry key="..\:/Users/Danrockz/AndroidStudioProjects/Assign2/app/src/main/res/layout/activity_confirmation.xml" value="0.2" />
         <entry key="..\:/Users/Danrockz/AndroidStudioProjects/Assign2/app/src/main/res/layout/activity_declareform.xml" value="0.14791666666666667" />
+        <entry key="..\:/Users/Danrockz/AndroidStudioProjects/Assign2/app/src/main/res/layout/activity_employee.xml" value="0.21979166666666666" />
+        <entry key="..\:/Users/Danrockz/AndroidStudioProjects/Assign2/app/src/main/res/layout/activity_employee_main.xml" value="0.21979166666666666" />
         <entry key="..\:/Users/Danrockz/AndroidStudioProjects/Assign2/app/src/main/res/layout/activity_implicitintents.xml" value="0.2" />
         <entry key="..\:/Users/Danrockz/AndroidStudioProjects/Assign2/app/src/main/res/layout/activity_login_page.xml" value="0.21979166666666666" />
         <entry key="..\:/Users/Danrockz/AndroidStudioProjects/Assign2/app/src/main/res/layout/activity_main.xml" value="0.264" />
@@ -20,6 +22,7 @@
         <entry key="..\:/Users/Danrockz/AndroidStudioProjects/Assign2/app/src/main/res/layout/activity_view_bookings.xml" value="0.2015625" />
         <entry key="..\:/Users/Danrockz/AndroidStudioProjects/Assign2/app/src/main/res/layout/activity_view_reservation.xml" value="0.21979166666666666" />
         <entry key="..\:/Users/Danrockz/AndroidStudioProjects/Assign2/app/src/main/res/layout/bookings_rv_item.xml" value="0.21979166666666666" />
+        <entry key="..\:/Users/Danrockz/AndroidStudioProjects/Assign2/app/src/main/res/layout/dialog_update_employee.xml" value="0.21979166666666666" />
         <entry key="..\:/Users/Danrockz/AndroidStudioProjects/Assign2/app/src/main/res/layout/fragment_check_box_check.xml" value="0.21979166666666666" />
         <entry key="..\:/Users/Danrockz/AndroidStudioProjects/Assign2/app/src/main/res/layout/fragment_date_picker.xml" value="0.21979166666666666" />
         <entry key="..\:/Users/Danrockz/AndroidStudioProjects/Assign2/app/src/main/res/layout/fragment_first.xml" value="0.21979166666666666" />
@@ -27,6 +30,7 @@
         <entry key="..\:/Users/Danrockz/AndroidStudioProjects/Assign2/app/src/main/res/layout/fragment_second.xml" value="0.21979166666666666" />
         <entry key="..\:/Users/Danrockz/AndroidStudioProjects/Assign2/app/src/main/res/layout/fragment_second2.xml" value="0.21979166666666666" />
         <entry key="..\:/Users/Danrockz/AndroidStudioProjects/Assign2/app/src/main/res/layout/fragment_time_picker.xml" value="0.21979166666666666" />
+        <entry key="..\:/Users/Danrockz/AndroidStudioProjects/Assign2/app/src/main/res/layout/list_layout_employee.xml" value="0.21979166666666666" />
         <entry key="..\:/Users/Danrockz/AndroidStudioProjects/Assign2/app/src/main/res/layout/my_row.xml" value="0.21927083333333333" />
         <entry key="..\:/Users/Danrockz/AndroidStudioProjects/Assign2/app/src/main/res/menu/menu.xml" value="0.2" />
         <entry key="..\:/Users/Danrockz/AndroidStudioProjects/Assign2/app/src/main/res/menu/mymenu.xml" value="0.1" />

@@ -2,8 +2,6 @@ package com.example.assign2;
 
 public class BookingModal {
 
-    // variables for our coursename,
-    // description, tracks and duration, id.
     private String Name;
     private String Address;
     private String Phone;
