@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Welcome to INTI Fast Food </string>
+    <string name="app_name"> INTI Fast Food Cafe </string>
     <!--Recycler View Strings-->
     <string-array name="SOP">
         <item>Sanitize Your Hands </item>
@@ -22,10 +22,12 @@
     <string name="action_order_message">You want to make a Reservation</string>
     <string name="action_status_message">You to Review your Reservation.</string>
     <string name="action_enquire_message">You want to know more about us.</string>
+    <string name="action_logout_message">You have logged out Successfully !</string>
     <!--Action Bar -->
     <string name="action_order">Order</string>
     <string name="action_status">Status</string>
     <string name="action_enquire">Navigate</string>
+    <string name="action_logout">Logout</string>
     <!--Dialog for alert pop-up -->
     <string name="alert_title">Are you Fully Vaccinated ? </string>
     <string name="alert_message">Only Fully Vaccinated Individuals who have completed 14 days since their second dose are allowed in this premise.</string>

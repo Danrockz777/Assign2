@@ -153,8 +153,14 @@ public class sopscreen extends AppCompatActivity {
                 return  true;
             case R.id.action_enquire:
                 displayToast(getString(R.string.action_enquire_message));
-                Intent intent2 = new Intent(sopscreen.this, implicitintents.class);
-                startActivity(intent2);
+                Intent intent9 = new Intent(sopscreen.this, implicitintents.class);
+                startActivity(intent9);
+                return  true;
+
+            case R.id.action_logout:
+                displayToast(getString(R.string.action_logout_message));
+                android.os.Process.killProcess(android.os.Process.myPid());
+                System.exit(1);
 
             default:
                 // Do nothing
